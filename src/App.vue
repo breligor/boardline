@@ -33,6 +33,20 @@ const minskFullDateTime = new Intl.DateTimeFormat("ru-RU", {
   minute: "2-digit",
 });
 
+const minskDayKeyFormatter = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "Europe/Minsk",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
+
+const minskDayFormatter = new Intl.DateTimeFormat("ru-RU", {
+  timeZone: "Europe/Minsk",
+  day: "2-digit",
+  month: "long",
+  year: "numeric",
+});
+
 const numberFormatter = new Intl.NumberFormat("ru-RU", { maximumFractionDigits: 1 });
 
 function parseMinskInput(date: string, time: string) {
@@ -68,6 +82,23 @@ function formatHours(value: number | null) {
 function formatSigned(value: number | null) {
   if (value === null) return "—";
   return value > 0 ? `+${value}` : String(value);
+}
+
+function minskDateKey(value: string) {
+  const parts = Object.fromEntries(
+    minskDayKeyFormatter.formatToParts(new Date(value)).map((part) => [part.type, part.value]),
+  );
+  return `${parts.year}-${parts.month}-${parts.day}`;
+}
+
+function formatDay(value: string) {
+  return minskDayFormatter.format(new Date(`${value}T12:00:00+03:00`));
+}
+
+function formatPercent(value: number | null) {
+  if (value === null || !Number.isFinite(value)) return "—";
+  const sign = value > 0 ? "+" : "";
+  return `${sign}${numberFormatter.format(value)}%`;
 }
 
 function freshnessLabel(value: FreshnessState | undefined) {
@@ -229,6 +260,42 @@ const chart = computed(() => {
 });
 
 const recentHistory = computed(() => [...snapshots.value].reverse().slice(0, 24));
+
+const dailyHistory = computed(() => {
+  const grouped = new Map<string, { snapshot: QueueSnapshot; measurements: number }>();
+
+  for (const snapshot of snapshots.value) {
+    if (!snapshot.statistics) continue;
+    const key = minskDateKey(snapshot.collectedAt);
+    const current = grouped.get(key);
+    grouped.set(key, {
+      snapshot,
+      measurements: (current?.measurements ?? 0) + 1,
+    });
+  }
+
+  const chronological = [...grouped.entries()]
+    .sort(([left], [right]) => left.localeCompare(right))
+    .map(([date, value], index, all) => {
+      const previous = index > 0 ? all[index - 1][1].snapshot : null;
+      const passed = value.snapshot.statistics!.carLastDay;
+      const previousPassed = previous?.statistics?.carLastDay ?? null;
+      const passedChange = previousPassed === null ? null : passed - previousPassed;
+      const passedChangePercent =
+        previousPassed && passedChange !== null ? (passedChange / previousPassed) * 100 : null;
+
+      return {
+        date,
+        snapshot: value.snapshot,
+        measurements: value.measurements,
+        passed,
+        passedChange,
+        passedChangePercent,
+      };
+    });
+
+  return chronological.reverse().slice(0, 30);
+});
 </script>
 
 <template>
@@ -441,10 +508,63 @@ const recentHistory = computed(() => [...snapshots.value].reverse().slice(0, 24)
         <div v-else class="empty-chart">График появится после первого успешного сбора.</div>
       </section>
 
-      <section class="panel history-panel">
+      <section class="panel daily-panel">
         <div class="panel-heading">
           <div>
             <p class="section-number">05</p>
+            <h2>Суточная динамика</h2>
+          </div>
+          <p>Последний замер каждого дня</p>
+        </div>
+        <p class="daily-note">
+          Показатель отражает количество автомобилей за 24 часа, предшествующие последнему замеру указанной даты.
+        </p>
+        <div class="table-wrap daily-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Дата</th>
+                <th>Прошло за 24 ч</th>
+                <th>К предыдущему дню</th>
+                <th>Средняя скорость</th>
+                <th>Очередь</th>
+                <th>Замеров</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="day in dailyHistory" :key="day.date">
+                <td>
+                  <div class="day-cell">
+                    <strong>{{ formatDay(day.date) }}</strong>
+                    <span v-if="day.date === minskDateKey(latest!.collectedAt)" class="current-day-chip">текущий день</span>
+                  </div>
+                </td>
+                <td class="daily-total"><strong>{{ day.passed }}</strong> авто</td>
+                <td
+                  :class="{
+                    'throughput-up': (day.passedChange ?? 0) > 0,
+                    'throughput-down': (day.passedChange ?? 0) < 0,
+                  }"
+                >
+                  {{ formatSigned(day.passedChange) }}
+                  <span v-if="day.passedChangePercent !== null">({{ formatPercent(day.passedChangePercent) }})</span>
+                </td>
+                <td>{{ numberFormatter.format(day.snapshot.statistics!.averagePerHour24) }} авто/ч</td>
+                <td>{{ day.snapshot.queueLength ?? "—" }}</td>
+                <td>{{ day.measurements }}</td>
+              </tr>
+              <tr v-if="!dailyHistory.length">
+                <td colspan="6">Суточная таблица появится после успешного сбора.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel history-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="section-number">06</p>
             <h2>Последние замеры</h2>
           </div>
           <p>{{ snapshots.length }} точек в истории</p>
