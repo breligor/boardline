@@ -159,31 +159,19 @@ const speed12h = computed(() => rollingSpeed(12));
 const speed24h = computed(() => rollingSpeed(24));
 
 const arrivalAt = computed(() => parseMinskInput(tripDate.value, arrivalTime.value));
+const bufferHours = computed(() => Math.max(0, Number(safetyBuffer.value) || 0));
 const targetCallAt = computed(() =>
-  arrivalAt.value ? addHours(arrivalAt.value, Math.max(0, safetyBuffer.value || 0)) : null,
+  arrivalAt.value ? addHours(arrivalAt.value, bufferHours.value) : null,
 );
 
-const historicalDailySpeeds = computed(() => {
-  const daily = new Map<string, number>();
-  for (const snapshot of snapshots.value) {
-    const value = snapshot.statistics?.averagePerHour24;
-    if (typeof value === "number" && value > 0) daily.set(minskDateKey(snapshot.collectedAt), value);
-  }
-  return [...daily.values()];
-});
-
-const speedP90 = computed(() => {
-  if (!historicalDailySpeeds.value.length) return null;
-  const sorted = [...historicalDailySpeeds.value].sort((left, right) => left - right);
-  return sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * 0.9))];
-});
-
-const conservativeSpeed = computed(() => Math.max(30, speedP90.value ?? 0));
+const calculationSpeed = computed(() =>
+  daySpeed.value !== null && daySpeed.value > 0 ? daySpeed.value : null,
+);
 const recommendedSolution = computed(() => {
-  if (queueLength.value === null || !targetCallAt.value) return null;
+  if (queueLength.value === null || !targetCallAt.value || calculationSpeed.value === null) return null;
   return solveQueueScenario(
     targetCallAt.value,
-    conservativeSpeed.value,
+    calculationSpeed.value,
     snapshots.value,
     queueLength.value,
   );
@@ -234,27 +222,19 @@ const earlyCallThreshold = computed(() => {
   return recommendationForecast.value.value / availableHours;
 });
 
-const riskAssessment = computed(() => {
+const safetyAssessment = computed(() => {
   if (earlyCallThreshold.value === null) {
-    return { level: "unknown", title: "Риск пока не рассчитан", detail: "Нет текущих данных." };
-  }
-
-  if (historicalDailySpeeds.value.length < 5) {
     return {
       level: "unknown",
-      title: "Недостаточно истории",
-      detail: `Нужно не менее 5 суточных наблюдений. Ранний вызов возможен при средней скорости выше ${numberFormatter.format(earlyCallThreshold.value)} авто/ч.`,
+      title: "Запас пока не рассчитан",
+      detail: "Для расчёта нужны текущая очередь и фактическая средняя скорость за 24 часа.",
     };
   }
 
-  const fasterSamples = historicalDailySpeeds.value.filter((speed) => speed > earlyCallThreshold.value!).length;
-  const probability = fasterSamples / historicalDailySpeeds.value.length;
-  const level = probability <= 0.05 ? "low" : probability <= 0.2 ? "medium" : "high";
-  const title = level === "low" ? "Низкий наблюдаемый риск" : level === "medium" ? "Умеренный риск" : "Высокий риск";
   return {
-    level,
-    title,
-    detail: `${Math.round(probability * 100)}% суточных наблюдений средней скорости были выше порога ${numberFormatter.format(earlyCallThreshold.value)} авто/ч.`,
+    level: bufferHours.value > 0 ? "low" : "medium",
+    title: `Временной запас: ${formatHours(bufferHours.value)}`,
+    detail: `При текущем прогнозе вызов произойдёт раньше прибытия, только если средняя скорость ожидания превысит ${numberFormatter.format(earlyCallThreshold.value)} авто/ч.`,
   };
 });
 
@@ -427,7 +407,7 @@ const dailyHistory = computed(() => {
               <p class="section-number">02</p>
               <h2>Когда регистрироваться</h2>
             </div>
-            <p>Консервативный расчёт</p>
+            <p>По фактической средней скорости</p>
           </div>
 
           <div class="recommendation-time">
@@ -435,15 +415,17 @@ const dailyHistory = computed(() => {
             <strong>{{ formatDateTime(recommendedRegistrationAt) }}</strong>
             <p>
               Прогноз очереди при регистрации: {{ recommendationForecast?.value ?? "—" }} авто.
-              Расчёт по {{ conservativeSpeed }} авто/ч на вызов около {{ formatDateTime(targetCallAt) }}.
+              Расчёт по фактической средней
+              {{ calculationSpeed === null ? "—" : numberFormatter.format(calculationSpeed) }} авто/ч
+              на вызов около {{ formatDateTime(targetCallAt) }}.
             </p>
           </div>
 
-          <div class="risk" :data-risk="riskAssessment.level">
+          <div class="risk" :data-risk="safetyAssessment.level">
             <span class="risk-mark" aria-hidden="true"></span>
             <div>
-              <strong>{{ riskAssessment.title }}</strong>
-              <p>{{ riskAssessment.detail }}</p>
+              <strong>{{ safetyAssessment.title }}</strong>
+              <p>{{ safetyAssessment.detail }}</p>
             </div>
           </div>
 
@@ -453,7 +435,8 @@ const dailyHistory = computed(() => {
               Уверенность: {{ forecastConfidenceLabel(recommendationForecast.confidence) }};
               использовано точек: {{ recommendationForecast.samples }}.
             </template>
-            Консервативная скорость берётся по суточным средним, а не по отдельным часовым всплескам.
+            Скорость основной рекомендации берётся напрямую из фактического показателя carLastDay / 24.
+            Значения 20/24/30 ниже используются только для сравнения сценариев.
           </p>
         </section>
       </div>
@@ -464,7 +447,7 @@ const dailyHistory = computed(() => {
             <p class="section-number">03</p>
             <h2>Сценарии скорости</h2>
           </div>
-          <p>Цель: вызов с выбранным запасом</p>
+          <p>Сравнение, не основная рекомендация</p>
         </div>
         <div class="table-wrap">
           <table>
