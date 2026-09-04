@@ -113,6 +113,39 @@ function toVehicleTimeline(queue) {
   }));
 }
 
+function countValues(queue, field) {
+  return queue.reduce((counts, vehicle) => {
+    const raw = numberOrNull(vehicle?.[field]);
+    const key = raw === null ? "null" : String(raw);
+    counts[key] = (counts[key] ?? 0) + 1;
+    return counts;
+  }, {});
+}
+
+function getQueueComposition(queue) {
+  const withOrderId = queue.filter((vehicle) => numberOrNull(vehicle?.order_id) !== null).length;
+  return {
+    statusCounts: countValues(queue, "status"),
+    typeQueueCounts: countValues(queue, "type_queue"),
+    withOrderId,
+    withoutOrderId: queue.length - withOrderId,
+  };
+}
+
+function findHourlyReference(snapshots, collectedAt) {
+  const collectedMs = Date.parse(collectedAt);
+  return snapshots
+    .map((snapshot) => ({
+      snapshot,
+      hours: (collectedMs - Date.parse(snapshot.collectedAt)) / 3_600_000,
+    }))
+    .filter(
+      ({ snapshot, hours }) =>
+        typeof snapshot.queueLength === "number" && hours >= 0.75 && hours <= 1.5,
+    )
+    .sort((left, right) => Math.abs(left.hours - 1) - Math.abs(right.hours - 1))[0] ?? null;
+}
+
 function getQueueTiming(vehicleTimeline, collectedAt) {
   const registrations = vehicleTimeline
     .map((vehicle) => vehicle.registrationAt)
@@ -212,6 +245,7 @@ async function main() {
   const monitoringRaw = monitoringResult.status === "fulfilled" ? monitoringResult.value.data : null;
   const queue = Array.isArray(monitoringRaw?.carLiveQueue) ? monitoringRaw.carLiveQueue : null;
   const vehicleTimeline = queue ? toVehicleTimeline(queue) : undefined;
+  const queueComposition = queue ? getQueueComposition(queue) : null;
   const queueLength = queue?.length ?? null;
   const queueChange =
     queueLength !== null && typeof previous?.queueLength === "number" ? queueLength - previous.queueLength : null;
@@ -227,14 +261,45 @@ async function main() {
         }
       : null;
 
-  const oneHourAgo = Date.parse(collectedAt) - 3_600_000;
+  const collectedMs = Date.parse(collectedAt);
+  const oneHourAgo = collectedMs - 3_600_000;
   const registrationsObservedLastHour = vehicleTimeline
     ? vehicleTimeline.filter(
         (vehicle) => vehicle.registrationAt && Date.parse(vehicle.registrationAt) >= oneHourAgo,
       ).length
     : null;
+  const previousMs = previous ? Date.parse(previous.collectedAt) : NaN;
+  const rawIntervalHours = (collectedMs - previousMs) / 3_600_000;
+  const collectionIntervalHours =
+    Number.isFinite(rawIntervalHours) && rawIntervalHours > 0 && rawIntervalHours <= 2.5
+      ? Number(rawIntervalHours.toFixed(3))
+      : null;
+  const registrationsObservedSincePrevious =
+    vehicleTimeline && collectionIntervalHours !== null
+      ? vehicleTimeline.filter(
+          (vehicle) =>
+            vehicle.registrationAt &&
+            Date.parse(vehicle.registrationAt) > previousMs &&
+            Date.parse(vehicle.registrationAt) <= collectedMs,
+        ).length
+      : null;
+  const estimatedRegistrationsSincePrevious =
+    queueChange !== null && carLastHour !== null && collectionIntervalHours !== null
+      ? Math.max(0, Number((queueChange + carLastHour * Math.min(collectionIntervalHours, 1)).toFixed(1)))
+      : null;
+  const hourlyReference = findHourlyReference(history.snapshots, collectedAt);
   const estimatedRegistrationsLastHour =
-    queueChange !== null && carLastHour !== null ? Math.max(0, queueChange + carLastHour) : null;
+    queueLength !== null && carLastHour !== null && hourlyReference
+      ? Math.max(
+          0,
+          Number(
+            (
+              (queueLength - hourlyReference.snapshot.queueLength) / hourlyReference.hours +
+              carLastHour
+            ).toFixed(1),
+          ),
+        )
+      : null;
   const queueTiming = vehicleTimeline ? getQueueTiming(vehicleTimeline, collectedAt) : null;
   const quality = assessFreshness({ source, queueTiming, collectedAt });
 
@@ -246,6 +311,10 @@ async function main() {
     statistics,
     registrationsObservedLastHour,
     estimatedRegistrationsLastHour,
+    collectionIntervalHours,
+    registrationsObservedSincePrevious,
+    estimatedRegistrationsSincePrevious,
+    queueComposition,
     freshness: quality.freshness,
     warnings: quality.warnings,
     queueTiming,
@@ -264,7 +333,7 @@ async function main() {
     });
 
   const nextHistory = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     checkpoint: { id: CHECKPOINT_ID, name: "Брест — Тересполь" },
     updatedAt: collectedAt,
     snapshots,

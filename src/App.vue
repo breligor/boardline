@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from "vue";
+import { forecastQueueAt, solveQueueScenario } from "./forecast";
 import { loadHistory } from "./services/history";
 import type { FreshnessState, HistoryFile, QueueSnapshot } from "./types";
 
@@ -111,6 +112,16 @@ function freshnessLabel(value: FreshnessState | undefined) {
   return value ? labels[value] : "Нет данных";
 }
 
+function forecastConfidenceLabel(value: "insufficient" | "low" | "medium" | "high") {
+  const labels = {
+    insufficient: "недостаточно истории",
+    low: "низкая уверенность",
+    medium: "средняя уверенность",
+    high: "высокая уверенность",
+  };
+  return labels[value];
+}
+
 async function refresh() {
   loading.value = true;
   loadError.value = "";
@@ -152,35 +163,55 @@ const targetCallAt = computed(() =>
   arrivalAt.value ? addHours(arrivalAt.value, Math.max(0, safetyBuffer.value || 0)) : null,
 );
 
-const historicalSpeeds = computed(() =>
-  snapshots.value
-    .map((snapshot) => snapshot.statistics?.carLastHour)
-    .filter((value): value is number => typeof value === "number" && value > 0),
-);
+const historicalDailySpeeds = computed(() => {
+  const daily = new Map<string, number>();
+  for (const snapshot of snapshots.value) {
+    const value = snapshot.statistics?.averagePerHour24;
+    if (typeof value === "number" && value > 0) daily.set(minskDateKey(snapshot.collectedAt), value);
+  }
+  return [...daily.values()];
+});
 
 const speedP90 = computed(() => {
-  if (!historicalSpeeds.value.length) return null;
-  const sorted = [...historicalSpeeds.value].sort((left, right) => left - right);
+  if (!historicalDailySpeeds.value.length) return null;
+  const sorted = [...historicalDailySpeeds.value].sort((left, right) => left - right);
   return sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * 0.9))];
 });
 
 const conservativeSpeed = computed(() => Math.max(30, speedP90.value ?? 0));
-const recommendedRegistrationAt = computed(() => {
+const recommendedSolution = computed(() => {
   if (queueLength.value === null || !targetCallAt.value) return null;
-  return addHours(targetCallAt.value, -queueLength.value / conservativeSpeed.value);
+  return solveQueueScenario(
+    targetCallAt.value,
+    conservativeSpeed.value,
+    snapshots.value,
+    queueLength.value,
+  );
 });
+const recommendedRegistrationAt = computed(() => recommendedSolution.value?.registrationAt ?? null);
+const recommendationForecast = computed(() => recommendedSolution.value?.forecast ?? null);
 
 const scenarios = computed(() => {
   if (queueLength.value === null || !targetCallAt.value) return [];
   return [20, 24, 30].map((speed) => {
-    const waitHours = queueLength.value! / speed;
+    const solution = solveQueueScenario(
+      targetCallAt.value!,
+      speed,
+      snapshots.value,
+      queueLength.value!,
+    );
+    const queueAtRecommendation = recommendedRegistrationAt.value
+      ? forecastQueueAt(recommendedRegistrationAt.value, snapshots.value, queueLength.value!).value
+      : null;
     return {
       speed,
-      waitHours,
-      registrationAt: addHours(targetCallAt.value!, -waitHours),
-      callAtRecommended: recommendedRegistrationAt.value
-        ? addHours(recommendedRegistrationAt.value, waitHours)
-        : null,
+      waitHours: solution.waitHours,
+      predictedQueue: solution.forecast.value,
+      registrationAt: solution.registrationAt,
+      callAtRecommended:
+        recommendedRegistrationAt.value && queueAtRecommendation !== null
+          ? addHours(recommendedRegistrationAt.value, queueAtRecommendation / speed)
+          : null,
     };
   });
 });
@@ -196,11 +227,11 @@ const departureWindow = computed(() => {
 });
 
 const earlyCallThreshold = computed(() => {
-  if (!arrivalAt.value || !recommendedRegistrationAt.value || queueLength.value === null) return null;
+  if (!arrivalAt.value || !recommendedRegistrationAt.value || !recommendationForecast.value) return null;
   const availableHours =
     (arrivalAt.value.getTime() - recommendedRegistrationAt.value.getTime()) / 3_600_000;
   if (availableHours <= 0) return null;
-  return queueLength.value / availableHours;
+  return recommendationForecast.value.value / availableHours;
 });
 
 const riskAssessment = computed(() => {
@@ -208,22 +239,22 @@ const riskAssessment = computed(() => {
     return { level: "unknown", title: "Риск пока не рассчитан", detail: "Нет текущих данных." };
   }
 
-  if (historicalSpeeds.value.length < 12) {
+  if (historicalDailySpeeds.value.length < 5) {
     return {
       level: "unknown",
       title: "Недостаточно истории",
-      detail: `Вызов раньше прибытия возможен при скорости выше ${numberFormatter.format(earlyCallThreshold.value)} авто/ч.`,
+      detail: `Нужно не менее 5 суточных наблюдений. Ранний вызов возможен при средней скорости выше ${numberFormatter.format(earlyCallThreshold.value)} авто/ч.`,
     };
   }
 
-  const fasterSamples = historicalSpeeds.value.filter((speed) => speed > earlyCallThreshold.value!).length;
-  const probability = fasterSamples / historicalSpeeds.value.length;
+  const fasterSamples = historicalDailySpeeds.value.filter((speed) => speed > earlyCallThreshold.value!).length;
+  const probability = fasterSamples / historicalDailySpeeds.value.length;
   const level = probability <= 0.05 ? "low" : probability <= 0.2 ? "medium" : "high";
   const title = level === "low" ? "Низкий наблюдаемый риск" : level === "medium" ? "Умеренный риск" : "Высокий риск";
   return {
     level,
     title,
-    detail: `${Math.round(probability * 100)}% собранных часовых значений были выше порога ${numberFormatter.format(earlyCallThreshold.value)} авто/ч.`,
+    detail: `${Math.round(probability * 100)}% суточных наблюдений средней скорости были выше порога ${numberFormatter.format(earlyCallThreshold.value)} авто/ч.`,
   };
 });
 
@@ -403,8 +434,8 @@ const dailyHistory = computed(() => {
             <span>Рекомендуемое время</span>
             <strong>{{ formatDateTime(recommendedRegistrationAt) }}</strong>
             <p>
-              Расчёт по {{ conservativeSpeed }} авто/ч на вызов около
-              {{ formatDateTime(targetCallAt) }}.
+              Прогноз очереди при регистрации: {{ recommendationForecast?.value ?? "—" }} авто.
+              Расчёт по {{ conservativeSpeed }} авто/ч на вызов около {{ formatDateTime(targetCallAt) }}.
             </p>
           </div>
 
@@ -417,7 +448,12 @@ const dailyHistory = computed(() => {
           </div>
 
           <p class="calculation-note">
-            Пока прогноз использует текущую длину очереди. После накопления истории консервативная скорость автоматически учитывает 90-й процентиль наблюдений.
+            {{ recommendationForecast?.method ?? "Для прогноза нужны данные." }}
+            <template v-if="recommendationForecast">
+              Уверенность: {{ forecastConfidenceLabel(recommendationForecast.confidence) }};
+              использовано точек: {{ recommendationForecast.samples }}.
+            </template>
+            Консервативная скорость берётся по суточным средним, а не по отдельным часовым всплескам.
           </p>
         </section>
       </div>
@@ -435,6 +471,7 @@ const dailyHistory = computed(() => {
             <thead>
               <tr>
                 <th>Скорость</th>
+                <th>Прогноз очереди</th>
                 <th>Ожидание</th>
                 <th>Регистрация для целевого вызова</th>
                 <th>Вызов при рекомендуемой регистрации</th>
@@ -443,12 +480,13 @@ const dailyHistory = computed(() => {
             <tbody>
               <tr v-for="scenario in scenarios" :key="scenario.speed">
                 <td><strong>{{ scenario.speed }}</strong> авто/ч</td>
+                <td>{{ scenario.predictedQueue }} авто</td>
                 <td>{{ formatHours(scenario.waitHours) }}</td>
                 <td>{{ formatDateTime(scenario.registrationAt) }}</td>
                 <td>{{ formatDateTime(scenario.callAtRecommended) }}</td>
               </tr>
               <tr v-if="!scenarios.length">
-                <td colspan="4">Для расчёта нужны данные об очереди.</td>
+                <td colspan="5">Для расчёта нужны данные об очереди.</td>
               </tr>
             </tbody>
           </table>
@@ -576,6 +614,7 @@ const dailyHistory = computed(() => {
                 <th>Собрано</th>
                 <th>Очередь</th>
                 <th>Изменение</th>
+                <th>Приток за интервал</th>
                 <th>За час</th>
                 <th>Среднее 24 ч</th>
                 <th>Качество</th>
@@ -588,12 +627,13 @@ const dailyHistory = computed(() => {
                 <td :class="{ positive: (snapshot.queueChange ?? 0) > 0, negative: (snapshot.queueChange ?? 0) < 0 }">
                   {{ formatSigned(snapshot.queueChange) }}
                 </td>
+                <td>{{ snapshot.estimatedRegistrationsSincePrevious ?? "—" }}</td>
                 <td>{{ snapshot.statistics?.carLastHour ?? "—" }}</td>
                 <td>{{ snapshot.statistics ? numberFormatter.format(snapshot.statistics.averagePerHour24) : "—" }}</td>
                 <td><span class="quality-chip" :data-state="snapshot.freshness">{{ freshnessLabel(snapshot.freshness) }}</span></td>
               </tr>
               <tr v-if="!recentHistory.length">
-                <td colspan="6">История пока пуста.</td>
+                <td colspan="7">История пока пуста.</td>
               </tr>
             </tbody>
           </table>
@@ -611,7 +651,7 @@ const dailyHistory = computed(() => {
         <p>
           Источник: belarusborder.by. API statistics не содержит собственного времени формирования ответа, поэтому его свежесть оценивается вместе с временными метками monitoring-new и повторяемостью ответов.
         </p>
-        <p>Номера автомобилей не сохраняются.</p>
+        <p>Очередь считается по всем записям carLiveQueue. Значения status и type_queue сохраняются отдельно, но не интерпретируются без подтверждения. Номера автомобилей не сохраняются.</p>
       </footer>
     </main>
   </div>

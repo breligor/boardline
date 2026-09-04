@@ -32,6 +32,13 @@ export interface QueueTiming {
   medianWaitingHours: number | null;
 }
 
+export interface QueueComposition {
+  statusCounts: Record<string, number>;
+  typeQueueCounts: Record<string, number>;
+  withOrderId: number;
+  withoutOrderId: number;
+}
+
 export interface QueueSnapshot {
   collectedAt: string;
   checkpointId: string;
@@ -40,6 +47,10 @@ export interface QueueSnapshot {
   statistics: CarStatistics | null;
   registrationsObservedLastHour: number | null;
   estimatedRegistrationsLastHour: number | null;
+  collectionIntervalHours?: number | null;
+  registrationsObservedSincePrevious?: number | null;
+  estimatedRegistrationsSincePrevious?: number | null;
+  queueComposition?: QueueComposition | null;
   freshness: FreshnessState;
   warnings: string[];
   queueTiming: QueueTiming | null;
