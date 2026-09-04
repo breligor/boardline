@@ -29,7 +29,7 @@ npm run build
 
 ## Автоматизация
 
-Workflow `collect.yml` запускается каждый час и обновляет `data/history.json`. `deploy-pages.yml` пересобирает сайт и публикует его через GitHub Pages после изменения ветки `main`.
+Workflow `collect.yml` запускается каждые 30 минут и обновляет `data/history.json`. `deploy-pages.yml` пересобирает сайт и публикует его через GitHub Pages после изменения ветки `main`.
 
 Первый запуск сборщика и публикацию также можно выполнить вручную во вкладке **Actions**.
 
