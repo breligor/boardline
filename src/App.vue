@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from "vue";
+import { computed, onMounted, onUnmounted, ref } from "vue";
 import { forecastQueueAt, solveQueueScenario } from "./forecast";
 import { loadHistory } from "./services/history";
 import type { FreshnessState, HistoryFile, QueueSnapshot } from "./types";
@@ -7,6 +7,8 @@ import type { FreshnessState, HistoryFile, QueueSnapshot } from "./types";
 const history = ref<HistoryFile | null>(null);
 const loading = ref(true);
 const loadError = ref("");
+const currentTime = ref(Date.now());
+let freshnessTimer: number | undefined;
 
 const tripDate = ref("2026-09-18");
 const arrivalTime = ref("23:00");
@@ -125,6 +127,7 @@ function forecastConfidenceLabel(value: "insufficient" | "low" | "medium" | "hig
 async function refresh() {
   loading.value = true;
   loadError.value = "";
+  currentTime.value = Date.now();
   try {
     history.value = await loadHistory();
   } catch (error) {
@@ -134,7 +137,16 @@ async function refresh() {
   }
 }
 
-onMounted(refresh);
+onMounted(() => {
+  void refresh();
+  freshnessTimer = window.setInterval(() => {
+    currentTime.value = Date.now();
+  }, 60_000);
+});
+
+onUnmounted(() => {
+  if (freshnessTimer !== undefined) window.clearInterval(freshnessTimer);
+});
 
 const queueLength = computed(() => latest.value?.queueLength ?? null);
 const currentSpeed = computed(() => latest.value?.statistics?.carLastHour ?? null);
@@ -142,6 +154,28 @@ const daySpeed = computed(() => latest.value?.statistics?.averagePerHour24 ?? nu
 const expectedWait = computed(() => {
   if (queueLength.value === null || !daySpeed.value) return null;
   return queueLength.value / daySpeed.value;
+});
+
+const latestAgeMinutes = computed(() => {
+  if (!latest.value) return null;
+  const collectedAt = Date.parse(latest.value.collectedAt);
+  if (!Number.isFinite(collectedAt)) return null;
+  return Math.max(0, (currentTime.value - collectedAt) / 60_000);
+});
+
+const displayedFreshness = computed<FreshnessState>(() => {
+  const sourceState = latest.value?.freshness ?? "unavailable";
+  if (sourceState === "fresh" && (latestAgeMinutes.value ?? Infinity) > 90) {
+    return "possibly_stale";
+  }
+  return sourceState;
+});
+
+const ageLabel = computed(() => {
+  const minutes = latestAgeMinutes.value;
+  if (minutes === null) return "возраст неизвестен";
+  if (minutes < 60) return `${Math.round(minutes)} мин назад`;
+  return `${numberFormatter.format(minutes / 60)} ч назад`;
 });
 
 function rollingSpeed(hours: number) {
@@ -327,11 +361,11 @@ const dailyHistory = computed(() => {
       </div>
 
       <section class="status-strip" aria-live="polite">
-        <div class="freshness" :data-state="latest?.freshness ?? 'unavailable'">
+        <div class="freshness" :data-state="displayedFreshness">
           <span class="status-dot" aria-hidden="true"></span>
-          <span>{{ freshnessLabel(latest?.freshness) }}</span>
+          <span>{{ freshnessLabel(displayedFreshness) }}</span>
         </div>
-        <span>Сбор: {{ formatDateTime(latest?.collectedAt ?? null) }}</span>
+        <span>Сбор: {{ formatDateTime(latest?.collectedAt ?? null) }} · {{ ageLabel }}</span>
         <span v-if="latest?.queueTiming?.latestChangedAt">
           Последнее изменение в очереди: {{ formatDateTime(latest.queueTiming.latestChangedAt) }}
         </span>
