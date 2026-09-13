@@ -4,7 +4,7 @@
     "id": "a9173a85-3fc0-424c-84f0-defa632481e4",
     "name": "Брест — Тересполь"
   },
-  "updatedAt": "2026-09-13T01:21:28.992Z",
+  "updatedAt": "2026-09-13T06:41:48.432Z",
   "snapshots": [
     {
       "collectedAt": "2026-09-04T18:44:50.115Z",
@@ -2083,29 +2083,6 @@
         "latestChangedAt": "2026-09-10T04:08:04.000Z",
         "medianWaitingHours": 0.12
       },
-      "vehicleTimeline": [
-        {
-          "registrationAt": "2026-09-10T03:51:40.000Z",
-          "changedAt": "2026-09-10T03:53:04.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-09-10T04:06:45.000Z",
-          "changedAt": "2026-09-10T04:07:05.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-09-10T04:07:35.000Z",
-          "changedAt": "2026-09-10T04:08:04.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        }
-      ],
       "source": {
         "statistics": {
           "state": "ok",
@@ -42553,6 +42530,95 @@
           "hash": "f17ec928de89850c",
           "repeatCount": 1,
           "responseDate": "Sun, 13 Sep 2026 01:21:29 GMT",
+          "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
+          "age": null
+        }
+      }
+    },
+    {
+      "collectedAt": "2026-09-13T06:41:48.432Z",
+      "checkpointId": "a9173a85-3fc0-424c-84f0-defa632481e4",
+      "queueLength": 5,
+      "queueChange": 3,
+      "statistics": {
+        "carLastHour": 32,
+        "carLastDay": 451,
+        "averagePerHour24": 18.79
+      },
+      "registrationsObservedLastHour": 5,
+      "estimatedRegistrationsLastHour": null,
+      "collectionIntervalHours": null,
+      "registrationsObservedSincePrevious": null,
+      "estimatedRegistrationsSincePrevious": null,
+      "queueComposition": {
+        "statusCounts": {
+          "3": 5
+        },
+        "typeQueueCounts": {
+          "3": 5
+        },
+        "withOrderId": 0,
+        "withoutOrderId": 5
+      },
+      "freshness": "fresh",
+      "warnings": [],
+      "queueTiming": {
+        "oldestRegistrationAt": "2026-09-13T06:13:36.000Z",
+        "newestRegistrationAt": "2026-09-13T06:34:55.000Z",
+        "latestChangedAt": "2026-09-13T06:35:05.000Z",
+        "medianWaitingHours": 0.15
+      },
+      "vehicleTimeline": [
+        {
+          "registrationAt": "2026-09-13T06:13:36.000Z",
+          "changedAt": "2026-09-13T06:14:05.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-13T06:21:02.000Z",
+          "changedAt": "2026-09-13T06:22:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-13T06:33:02.000Z",
+          "changedAt": "2026-09-13T06:33:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-13T06:34:09.000Z",
+          "changedAt": "2026-09-13T06:35:05.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-13T06:34:55.000Z",
+          "changedAt": "2026-09-13T06:35:05.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        }
+      ],
+      "source": {
+        "statistics": {
+          "state": "ok",
+          "hash": "8de95567af68ac60",
+          "repeatCount": 1,
+          "responseDate": "Sun, 13 Sep 2026 06:41:49 GMT",
+          "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
+          "age": null
+        },
+        "monitoring": {
+          "state": "ok",
+          "hash": "4bb867621dafbfee",
+          "repeatCount": 1,
+          "responseDate": "Sun, 13 Sep 2026 06:41:49 GMT",
           "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
           "age": null
         }
