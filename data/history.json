@@ -4,7 +4,7 @@
     "id": "a9173a85-3fc0-424c-84f0-defa632481e4",
     "name": "Брест — Тересполь"
   },
-  "updatedAt": "2026-09-19T13:01:13.785Z",
+  "updatedAt": "2026-09-19T16:20:57.678Z",
   "snapshots": [
     {
       "collectedAt": "2026-09-04T18:44:50.115Z",
@@ -24731,6 +24731,75 @@
           "hash": "4047458f3f67b414",
           "repeatCount": 1,
           "responseDate": "Sat, 19 Sep 2026 13:01:14 GMT",
+          "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
+          "age": null
+        }
+      }
+    },
+    {
+      "collectedAt": "2026-09-19T16:20:57.678Z",
+      "checkpointId": "a9173a85-3fc0-424c-84f0-defa632481e4",
+      "queueLength": 2,
+      "queueChange": -29,
+      "statistics": {
+        "carLastHour": 9,
+        "carLastDay": 525,
+        "averagePerHour24": 21.88
+      },
+      "registrationsObservedLastHour": 1,
+      "estimatedRegistrationsLastHour": null,
+      "collectionIntervalHours": null,
+      "registrationsObservedSincePrevious": null,
+      "estimatedRegistrationsSincePrevious": null,
+      "queueComposition": {
+        "statusCounts": {
+          "2": 1,
+          "3": 1
+        },
+        "typeQueueCounts": {
+          "3": 2
+        },
+        "withOrderId": 1,
+        "withoutOrderId": 1
+      },
+      "freshness": "fresh",
+      "warnings": [],
+      "queueTiming": {
+        "oldestRegistrationAt": "2026-09-19T14:57:34.000Z",
+        "newestRegistrationAt": "2026-09-19T16:20:17.000Z",
+        "latestChangedAt": "2026-09-19T16:20:17.000Z",
+        "medianWaitingHours": 0.7
+      },
+      "vehicleTimeline": [
+        {
+          "registrationAt": "2026-09-19T14:57:34.000Z",
+          "changedAt": "2026-09-19T15:50:05.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-19T16:20:17.000Z",
+          "changedAt": "2026-09-19T16:20:17.000Z",
+          "orderId": 1,
+          "status": 2,
+          "typeQueue": 3
+        }
+      ],
+      "source": {
+        "statistics": {
+          "state": "ok",
+          "hash": "13cca056f78c32db",
+          "repeatCount": 1,
+          "responseDate": "Sat, 19 Sep 2026 16:20:58 GMT",
+          "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
+          "age": null
+        },
+        "monitoring": {
+          "state": "ok",
+          "hash": "9337cca5c97e9f0b",
+          "repeatCount": 1,
+          "responseDate": "Sat, 19 Sep 2026 16:20:58 GMT",
           "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
           "age": null
         }
