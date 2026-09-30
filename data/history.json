@@ -4,7 +4,7 @@
     "id": "a9173a85-3fc0-424c-84f0-defa632481e4",
     "name": "Брест — Тересполь"
   },
-  "updatedAt": "2026-09-30T05:52:09.214Z",
+  "updatedAt": "2026-09-30T12:20:31.822Z",
   "snapshots": [
     {
       "collectedAt": "2026-09-04T18:44:50.115Z",
@@ -7726,113 +7726,6 @@
         "latestChangedAt": "2026-09-27T06:16:05.000Z",
         "medianWaitingHours": 0.34
       },
-      "vehicleTimeline": [
-        {
-          "registrationAt": "2026-09-27T05:54:29.000Z",
-          "changedAt": "2026-09-27T05:55:05.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-09-27T06:01:41.000Z",
-          "changedAt": "2026-09-27T06:02:05.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-09-27T06:02:09.000Z",
-          "changedAt": "2026-09-27T06:03:04.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-09-27T06:02:28.000Z",
-          "changedAt": "2026-09-27T06:03:04.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-09-27T06:04:26.000Z",
-          "changedAt": "2026-09-27T06:05:04.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-09-27T06:05:43.000Z",
-          "changedAt": "2026-09-27T06:06:05.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-09-27T06:07:39.000Z",
-          "changedAt": "2026-09-27T06:08:04.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-09-27T06:07:41.000Z",
-          "changedAt": "2026-09-27T06:08:04.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-09-27T06:10:05.000Z",
-          "changedAt": "2026-09-27T06:10:05.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-09-27T06:11:10.000Z",
-          "changedAt": "2026-09-27T06:12:06.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-09-27T06:11:26.000Z",
-          "changedAt": "2026-09-27T06:12:06.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-09-27T06:12:04.000Z",
-          "changedAt": "2026-09-27T06:13:04.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-09-27T06:14:29.000Z",
-          "changedAt": "2026-09-27T06:15:05.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-09-27T06:15:52.000Z",
-          "changedAt": "2026-09-27T06:16:05.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-09-27T06:15:57.000Z",
-          "changedAt": "2026-09-27T06:16:05.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        }
-      ],
       "source": {
         "statistics": {
           "state": "ok",
@@ -36508,6 +36401,249 @@
           "hash": "45fe81fad6713df0",
           "repeatCount": 1,
           "responseDate": "Wed, 30 Sep 2026 05:52:10 GMT",
+          "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
+          "age": null
+        }
+      }
+    },
+    {
+      "collectedAt": "2026-09-30T12:20:31.822Z",
+      "checkpointId": "a9173a85-3fc0-424c-84f0-defa632481e4",
+      "queueLength": 27,
+      "queueChange": 20,
+      "statistics": {
+        "carLastHour": 14,
+        "carLastDay": 517,
+        "averagePerHour24": 21.54
+      },
+      "registrationsObservedLastHour": 17,
+      "estimatedRegistrationsLastHour": null,
+      "collectionIntervalHours": null,
+      "registrationsObservedSincePrevious": null,
+      "estimatedRegistrationsSincePrevious": null,
+      "queueComposition": {
+        "statusCounts": {
+          "2": 27
+        },
+        "typeQueueCounts": {
+          "3": 27
+        },
+        "withOrderId": 27,
+        "withoutOrderId": 0
+      },
+      "freshness": "fresh",
+      "warnings": [],
+      "queueTiming": {
+        "oldestRegistrationAt": "2026-09-30T10:52:16.000Z",
+        "newestRegistrationAt": "2026-09-30T12:18:44.000Z",
+        "latestChangedAt": "2026-09-30T12:18:44.000Z",
+        "medianWaitingHours": 0.69
+      },
+      "vehicleTimeline": [
+        {
+          "registrationAt": "2026-09-30T10:52:16.000Z",
+          "changedAt": "2026-09-30T10:52:16.000Z",
+          "orderId": 1,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T10:53:32.000Z",
+          "changedAt": "2026-09-30T10:53:32.000Z",
+          "orderId": 2,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T10:55:12.000Z",
+          "changedAt": "2026-09-30T10:55:12.000Z",
+          "orderId": 3,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T10:57:56.000Z",
+          "changedAt": "2026-09-30T10:57:56.000Z",
+          "orderId": 4,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:00:13.000Z",
+          "changedAt": "2026-09-30T11:00:13.000Z",
+          "orderId": 5,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:02:58.000Z",
+          "changedAt": "2026-09-30T11:02:58.000Z",
+          "orderId": 6,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:06:46.000Z",
+          "changedAt": "2026-09-30T11:06:46.000Z",
+          "orderId": 7,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:08:29.000Z",
+          "changedAt": "2026-09-30T11:08:29.000Z",
+          "orderId": 8,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:11:11.000Z",
+          "changedAt": "2026-09-30T11:11:11.000Z",
+          "orderId": 9,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:15:02.000Z",
+          "changedAt": "2026-09-30T11:15:02.000Z",
+          "orderId": 10,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:20:39.000Z",
+          "changedAt": "2026-09-30T11:20:39.000Z",
+          "orderId": 11,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:29:29.000Z",
+          "changedAt": "2026-09-30T11:29:29.000Z",
+          "orderId": 12,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:33:05.000Z",
+          "changedAt": "2026-09-30T11:33:05.000Z",
+          "orderId": 13,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:38:56.000Z",
+          "changedAt": "2026-09-30T11:38:56.000Z",
+          "orderId": 14,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:39:21.000Z",
+          "changedAt": "2026-09-30T11:39:21.000Z",
+          "orderId": 15,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:39:40.000Z",
+          "changedAt": "2026-09-30T11:39:40.000Z",
+          "orderId": 16,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:39:49.000Z",
+          "changedAt": "2026-09-30T11:39:49.000Z",
+          "orderId": 17,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:41:37.000Z",
+          "changedAt": "2026-09-30T11:41:37.000Z",
+          "orderId": 18,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:44:00.000Z",
+          "changedAt": "2026-09-30T11:44:00.000Z",
+          "orderId": 19,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:47:31.000Z",
+          "changedAt": "2026-09-30T11:47:31.000Z",
+          "orderId": 20,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:52:41.000Z",
+          "changedAt": "2026-09-30T11:52:41.000Z",
+          "orderId": 21,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:54:57.000Z",
+          "changedAt": "2026-09-30T11:54:57.000Z",
+          "orderId": 22,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T11:56:02.000Z",
+          "changedAt": "2026-09-30T11:56:02.000Z",
+          "orderId": 23,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T12:04:15.000Z",
+          "changedAt": "2026-09-30T12:04:15.000Z",
+          "orderId": 24,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T12:12:06.000Z",
+          "changedAt": "2026-09-30T12:12:06.000Z",
+          "orderId": 25,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T12:18:15.000Z",
+          "changedAt": "2026-09-30T12:18:15.000Z",
+          "orderId": 26,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-09-30T12:18:44.000Z",
+          "changedAt": "2026-09-30T12:18:44.000Z",
+          "orderId": 27,
+          "status": 2,
+          "typeQueue": 3
+        }
+      ],
+      "source": {
+        "statistics": {
+          "state": "ok",
+          "hash": "6d2a07da0ca3e228",
+          "repeatCount": 1,
+          "responseDate": "Wed, 30 Sep 2026 12:20:32 GMT",
+          "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
+          "age": null
+        },
+        "monitoring": {
+          "state": "ok",
+          "hash": "4d4239a0493c22c7",
+          "repeatCount": 1,
+          "responseDate": "Wed, 30 Sep 2026 12:20:32 GMT",
           "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
           "age": null
         }
