@@ -4,7 +4,7 @@
     "id": "a9173a85-3fc0-424c-84f0-defa632481e4",
     "name": "Брест — Тересполь"
   },
-  "updatedAt": "2026-10-12T02:36:24.579Z",
+  "updatedAt": "2026-10-12T09:41:54.443Z",
   "snapshots": [
     {
       "collectedAt": "2026-09-04T18:44:50.115Z",
@@ -10623,1093 +10623,6 @@
         "latestChangedAt": "2026-10-09T06:27:54.000Z",
         "medianWaitingHours": 7.12
       },
-      "vehicleTimeline": [
-        {
-          "registrationAt": "2026-10-08T19:52:24.000Z",
-          "changedAt": "2026-10-09T06:03:05.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T19:54:12.000Z",
-          "changedAt": "2026-10-09T06:03:05.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T19:56:21.000Z",
-          "changedAt": "2026-10-09T06:13:05.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:02:23.000Z",
-          "changedAt": "2026-10-09T06:13:07.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:04:16.000Z",
-          "changedAt": "2026-10-09T06:25:06.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:05:43.000Z",
-          "changedAt": "2026-10-09T06:25:06.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:05:53.000Z",
-          "changedAt": "2026-10-09T06:25:06.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:06:01.000Z",
-          "changedAt": "2026-10-09T06:25:06.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:06:14.000Z",
-          "changedAt": "2026-10-09T06:25:06.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:06:36.000Z",
-          "changedAt": "2026-10-09T06:25:06.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:08:06.000Z",
-          "changedAt": "2026-10-08T20:08:06.000Z",
-          "orderId": 1,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:08:23.000Z",
-          "changedAt": "2026-10-08T20:08:23.000Z",
-          "orderId": 2,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:09:13.000Z",
-          "changedAt": "2026-10-08T20:09:13.000Z",
-          "orderId": 3,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:09:22.000Z",
-          "changedAt": "2026-10-08T20:09:22.000Z",
-          "orderId": 4,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:09:23.000Z",
-          "changedAt": "2026-10-08T20:09:23.000Z",
-          "orderId": 5,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:11:01.000Z",
-          "changedAt": "2026-10-08T20:11:01.000Z",
-          "orderId": 6,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:11:20.000Z",
-          "changedAt": "2026-10-08T20:11:20.000Z",
-          "orderId": 7,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:11:37.000Z",
-          "changedAt": "2026-10-08T20:11:37.000Z",
-          "orderId": 8,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:11:41.000Z",
-          "changedAt": "2026-10-08T20:11:41.000Z",
-          "orderId": 9,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:12:38.000Z",
-          "changedAt": "2026-10-08T20:12:38.000Z",
-          "orderId": 10,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:15:58.000Z",
-          "changedAt": "2026-10-08T20:15:58.000Z",
-          "orderId": 11,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:16:05.000Z",
-          "changedAt": "2026-10-08T20:16:05.000Z",
-          "orderId": 12,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:16:29.000Z",
-          "changedAt": "2026-10-08T20:16:29.000Z",
-          "orderId": 13,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:17:58.000Z",
-          "changedAt": "2026-10-08T20:17:58.000Z",
-          "orderId": 14,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:19:26.000Z",
-          "changedAt": "2026-10-08T20:19:26.000Z",
-          "orderId": 15,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:19:46.000Z",
-          "changedAt": "2026-10-08T20:19:46.000Z",
-          "orderId": 16,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:19:58.000Z",
-          "changedAt": "2026-10-08T20:19:58.000Z",
-          "orderId": 17,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:22:43.000Z",
-          "changedAt": "2026-10-08T20:22:43.000Z",
-          "orderId": 18,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:23:17.000Z",
-          "changedAt": "2026-10-08T20:23:17.000Z",
-          "orderId": 19,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:23:22.000Z",
-          "changedAt": "2026-10-08T20:23:22.000Z",
-          "orderId": 20,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:23:23.000Z",
-          "changedAt": "2026-10-08T20:23:23.000Z",
-          "orderId": 21,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:23:36.000Z",
-          "changedAt": "2026-10-08T20:23:36.000Z",
-          "orderId": 22,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:24:13.000Z",
-          "changedAt": "2026-10-08T20:24:13.000Z",
-          "orderId": 23,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:24:46.000Z",
-          "changedAt": "2026-10-08T20:24:46.000Z",
-          "orderId": 24,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:24:49.000Z",
-          "changedAt": "2026-10-08T20:24:49.000Z",
-          "orderId": 25,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:25:26.000Z",
-          "changedAt": "2026-10-08T20:25:26.000Z",
-          "orderId": 26,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:27:26.000Z",
-          "changedAt": "2026-10-08T20:27:26.000Z",
-          "orderId": 27,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:31:56.000Z",
-          "changedAt": "2026-10-08T20:31:56.000Z",
-          "orderId": 28,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:33:06.000Z",
-          "changedAt": "2026-10-08T20:33:06.000Z",
-          "orderId": 29,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:34:33.000Z",
-          "changedAt": "2026-10-08T20:34:33.000Z",
-          "orderId": 30,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:36:21.000Z",
-          "changedAt": "2026-10-08T20:36:21.000Z",
-          "orderId": 31,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:37:46.000Z",
-          "changedAt": "2026-10-08T20:37:46.000Z",
-          "orderId": 32,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:39:00.000Z",
-          "changedAt": "2026-10-08T20:39:00.000Z",
-          "orderId": 33,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:40:33.000Z",
-          "changedAt": "2026-10-08T20:40:33.000Z",
-          "orderId": 34,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:40:57.000Z",
-          "changedAt": "2026-10-08T20:40:57.000Z",
-          "orderId": 35,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:41:05.000Z",
-          "changedAt": "2026-10-08T20:41:05.000Z",
-          "orderId": 36,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:44:37.000Z",
-          "changedAt": "2026-10-08T20:44:37.000Z",
-          "orderId": 37,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:44:40.000Z",
-          "changedAt": "2026-10-08T20:44:40.000Z",
-          "orderId": 38,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:47:38.000Z",
-          "changedAt": "2026-10-08T20:47:38.000Z",
-          "orderId": 39,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:48:16.000Z",
-          "changedAt": "2026-10-08T20:48:16.000Z",
-          "orderId": 40,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:51:56.000Z",
-          "changedAt": "2026-10-08T20:51:56.000Z",
-          "orderId": 41,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T20:54:31.000Z",
-          "changedAt": "2026-10-08T20:54:31.000Z",
-          "orderId": 42,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T21:01:25.000Z",
-          "changedAt": "2026-10-08T21:01:25.000Z",
-          "orderId": 43,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T21:02:59.000Z",
-          "changedAt": "2026-10-08T21:02:59.000Z",
-          "orderId": 44,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T21:05:36.000Z",
-          "changedAt": "2026-10-08T21:05:36.000Z",
-          "orderId": 45,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T21:07:44.000Z",
-          "changedAt": "2026-10-08T21:07:44.000Z",
-          "orderId": 46,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T21:08:54.000Z",
-          "changedAt": "2026-10-08T21:08:54.000Z",
-          "orderId": 47,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T21:16:03.000Z",
-          "changedAt": "2026-10-08T21:16:03.000Z",
-          "orderId": 48,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T21:16:19.000Z",
-          "changedAt": "2026-10-08T21:16:19.000Z",
-          "orderId": 49,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T21:18:06.000Z",
-          "changedAt": "2026-10-08T21:18:06.000Z",
-          "orderId": 50,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T21:20:50.000Z",
-          "changedAt": "2026-10-08T21:20:50.000Z",
-          "orderId": 51,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T21:21:15.000Z",
-          "changedAt": "2026-10-08T21:21:15.000Z",
-          "orderId": 52,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T21:22:25.000Z",
-          "changedAt": "2026-10-08T21:22:25.000Z",
-          "orderId": 53,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T21:34:53.000Z",
-          "changedAt": "2026-10-08T21:34:53.000Z",
-          "orderId": 54,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T22:03:01.000Z",
-          "changedAt": "2026-10-08T22:03:01.000Z",
-          "orderId": 55,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T22:03:49.000Z",
-          "changedAt": "2026-10-08T22:03:49.000Z",
-          "orderId": 56,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T22:05:38.000Z",
-          "changedAt": "2026-10-08T22:05:38.000Z",
-          "orderId": 57,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T22:07:10.000Z",
-          "changedAt": "2026-10-08T22:07:10.000Z",
-          "orderId": 58,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T22:09:38.000Z",
-          "changedAt": "2026-10-08T22:09:38.000Z",
-          "orderId": 59,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T22:23:45.000Z",
-          "changedAt": "2026-10-08T22:23:45.000Z",
-          "orderId": 60,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T22:35:57.000Z",
-          "changedAt": "2026-10-08T22:35:57.000Z",
-          "orderId": 61,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T22:37:08.000Z",
-          "changedAt": "2026-10-08T22:37:08.000Z",
-          "orderId": 62,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T22:39:16.000Z",
-          "changedAt": "2026-10-08T22:39:16.000Z",
-          "orderId": 63,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T22:52:31.000Z",
-          "changedAt": "2026-10-08T22:52:31.000Z",
-          "orderId": 64,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T23:02:31.000Z",
-          "changedAt": "2026-10-08T23:02:31.000Z",
-          "orderId": 65,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T23:05:10.000Z",
-          "changedAt": "2026-10-08T23:05:10.000Z",
-          "orderId": 66,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T23:09:56.000Z",
-          "changedAt": "2026-10-08T23:09:56.000Z",
-          "orderId": 67,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T23:26:44.000Z",
-          "changedAt": "2026-10-08T23:26:44.000Z",
-          "orderId": 68,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T23:34:40.000Z",
-          "changedAt": "2026-10-08T23:34:40.000Z",
-          "orderId": 69,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T23:41:12.000Z",
-          "changedAt": "2026-10-08T23:41:12.000Z",
-          "orderId": 70,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T23:45:04.000Z",
-          "changedAt": "2026-10-08T23:45:04.000Z",
-          "orderId": 71,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T23:48:20.000Z",
-          "changedAt": "2026-10-08T23:48:20.000Z",
-          "orderId": 72,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-08T23:59:55.000Z",
-          "changedAt": "2026-10-08T23:59:55.000Z",
-          "orderId": 73,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T00:18:54.000Z",
-          "changedAt": "2026-10-09T00:18:54.000Z",
-          "orderId": 74,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T00:33:03.000Z",
-          "changedAt": "2026-10-09T00:33:03.000Z",
-          "orderId": 75,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T00:33:28.000Z",
-          "changedAt": "2026-10-09T00:33:28.000Z",
-          "orderId": 76,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T00:34:53.000Z",
-          "changedAt": "2026-10-09T00:34:53.000Z",
-          "orderId": 77,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T00:59:06.000Z",
-          "changedAt": "2026-10-09T00:59:06.000Z",
-          "orderId": 78,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T01:04:27.000Z",
-          "changedAt": "2026-10-09T01:04:27.000Z",
-          "orderId": 79,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T01:30:44.000Z",
-          "changedAt": "2026-10-09T01:30:44.000Z",
-          "orderId": 80,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T01:36:37.000Z",
-          "changedAt": "2026-10-09T01:36:37.000Z",
-          "orderId": 81,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T01:38:11.000Z",
-          "changedAt": "2026-10-09T01:38:11.000Z",
-          "orderId": 82,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T01:41:58.000Z",
-          "changedAt": "2026-10-09T01:41:58.000Z",
-          "orderId": 83,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T02:35:00.000Z",
-          "changedAt": "2026-10-09T02:35:00.000Z",
-          "orderId": 84,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T02:35:38.000Z",
-          "changedAt": "2026-10-09T02:35:38.000Z",
-          "orderId": 85,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T02:54:39.000Z",
-          "changedAt": "2026-10-09T02:54:39.000Z",
-          "orderId": 86,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T02:55:57.000Z",
-          "changedAt": "2026-10-09T02:55:57.000Z",
-          "orderId": 87,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T03:01:36.000Z",
-          "changedAt": "2026-10-09T03:01:36.000Z",
-          "orderId": 88,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T03:07:18.000Z",
-          "changedAt": "2026-10-09T03:07:18.000Z",
-          "orderId": 89,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T03:10:25.000Z",
-          "changedAt": "2026-10-09T03:10:25.000Z",
-          "orderId": 90,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T03:31:14.000Z",
-          "changedAt": "2026-10-09T03:31:14.000Z",
-          "orderId": 91,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T03:31:24.000Z",
-          "changedAt": "2026-10-09T03:31:24.000Z",
-          "orderId": 92,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T03:33:44.000Z",
-          "changedAt": "2026-10-09T03:33:44.000Z",
-          "orderId": 93,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T03:37:13.000Z",
-          "changedAt": "2026-10-09T03:37:13.000Z",
-          "orderId": 94,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T03:39:04.000Z",
-          "changedAt": "2026-10-09T03:39:04.000Z",
-          "orderId": 95,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T03:41:28.000Z",
-          "changedAt": "2026-10-09T03:41:28.000Z",
-          "orderId": 96,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T03:42:16.000Z",
-          "changedAt": "2026-10-09T03:42:16.000Z",
-          "orderId": 97,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T03:52:01.000Z",
-          "changedAt": "2026-10-09T03:52:01.000Z",
-          "orderId": 98,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T03:56:09.000Z",
-          "changedAt": "2026-10-09T03:56:09.000Z",
-          "orderId": 99,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:01:07.000Z",
-          "changedAt": "2026-10-09T04:01:07.000Z",
-          "orderId": 100,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:02:39.000Z",
-          "changedAt": "2026-10-09T04:02:39.000Z",
-          "orderId": 101,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:02:54.000Z",
-          "changedAt": "2026-10-09T04:02:54.000Z",
-          "orderId": 102,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:05:25.000Z",
-          "changedAt": "2026-10-09T04:05:25.000Z",
-          "orderId": 103,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:07:10.000Z",
-          "changedAt": "2026-10-09T04:07:10.000Z",
-          "orderId": 104,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:07:35.000Z",
-          "changedAt": "2026-10-09T04:07:35.000Z",
-          "orderId": 105,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:18:08.000Z",
-          "changedAt": "2026-10-09T04:18:08.000Z",
-          "orderId": 106,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:28:18.000Z",
-          "changedAt": "2026-10-09T04:28:18.000Z",
-          "orderId": 107,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:28:36.000Z",
-          "changedAt": "2026-10-09T04:28:36.000Z",
-          "orderId": 108,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:31:50.000Z",
-          "changedAt": "2026-10-09T04:31:50.000Z",
-          "orderId": 109,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:32:39.000Z",
-          "changedAt": "2026-10-09T04:32:39.000Z",
-          "orderId": 110,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:34:03.000Z",
-          "changedAt": "2026-10-09T04:34:03.000Z",
-          "orderId": 111,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:36:04.000Z",
-          "changedAt": "2026-10-09T04:36:04.000Z",
-          "orderId": 112,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:38:00.000Z",
-          "changedAt": "2026-10-09T04:38:00.000Z",
-          "orderId": 113,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:40:12.000Z",
-          "changedAt": "2026-10-09T04:40:12.000Z",
-          "orderId": 114,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:44:50.000Z",
-          "changedAt": "2026-10-09T04:44:50.000Z",
-          "orderId": 115,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:46:42.000Z",
-          "changedAt": "2026-10-09T04:46:42.000Z",
-          "orderId": 116,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:47:32.000Z",
-          "changedAt": "2026-10-09T04:47:32.000Z",
-          "orderId": 117,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:50:26.000Z",
-          "changedAt": "2026-10-09T04:50:26.000Z",
-          "orderId": 118,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:52:29.000Z",
-          "changedAt": "2026-10-09T04:52:29.000Z",
-          "orderId": 119,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T04:55:48.000Z",
-          "changedAt": "2026-10-09T04:55:48.000Z",
-          "orderId": 120,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T05:02:37.000Z",
-          "changedAt": "2026-10-09T05:02:37.000Z",
-          "orderId": 121,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T05:03:21.000Z",
-          "changedAt": "2026-10-09T05:03:21.000Z",
-          "orderId": 122,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T05:06:57.000Z",
-          "changedAt": "2026-10-09T05:06:57.000Z",
-          "orderId": 123,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T05:14:36.000Z",
-          "changedAt": "2026-10-09T05:14:36.000Z",
-          "orderId": 124,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T05:17:19.000Z",
-          "changedAt": "2026-10-09T05:17:19.000Z",
-          "orderId": 125,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T05:20:54.000Z",
-          "changedAt": "2026-10-09T05:20:54.000Z",
-          "orderId": 126,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T05:27:36.000Z",
-          "changedAt": "2026-10-09T05:27:36.000Z",
-          "orderId": 127,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T05:32:18.000Z",
-          "changedAt": "2026-10-09T05:32:18.000Z",
-          "orderId": 128,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T05:33:26.000Z",
-          "changedAt": "2026-10-09T05:33:26.000Z",
-          "orderId": 129,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T05:35:13.000Z",
-          "changedAt": "2026-10-09T05:35:13.000Z",
-          "orderId": 130,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T05:43:56.000Z",
-          "changedAt": "2026-10-09T05:43:56.000Z",
-          "orderId": 131,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T05:46:00.000Z",
-          "changedAt": "2026-10-09T05:46:00.000Z",
-          "orderId": 132,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T05:48:12.000Z",
-          "changedAt": "2026-10-09T05:48:12.000Z",
-          "orderId": 133,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T05:52:17.000Z",
-          "changedAt": "2026-10-09T05:52:17.000Z",
-          "orderId": 134,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T06:00:38.000Z",
-          "changedAt": "2026-10-09T06:00:38.000Z",
-          "orderId": 135,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T06:02:19.000Z",
-          "changedAt": "2026-10-09T06:02:19.000Z",
-          "orderId": 136,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T06:02:25.000Z",
-          "changedAt": "2026-10-09T06:02:25.000Z",
-          "orderId": 137,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T06:12:55.000Z",
-          "changedAt": "2026-10-09T06:12:55.000Z",
-          "orderId": 138,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T06:13:28.000Z",
-          "changedAt": "2026-10-09T06:13:28.000Z",
-          "orderId": 139,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T06:13:42.000Z",
-          "changedAt": "2026-10-09T06:13:42.000Z",
-          "orderId": 140,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T06:16:00.000Z",
-          "changedAt": "2026-10-09T06:16:00.000Z",
-          "orderId": 141,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T06:16:31.000Z",
-          "changedAt": "2026-10-09T06:16:31.000Z",
-          "orderId": 142,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T06:17:11.000Z",
-          "changedAt": "2026-10-09T06:17:11.000Z",
-          "orderId": 143,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T06:26:07.000Z",
-          "changedAt": "2026-10-09T06:26:07.000Z",
-          "orderId": 144,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-09T06:27:54.000Z",
-          "changedAt": "2026-10-09T06:27:54.000Z",
-          "orderId": 145,
-          "status": 2,
-          "typeQueue": 3
-        }
-      ],
       "source": {
         "statistics": {
           "state": "ok",
@@ -35131,6 +34044,684 @@
           "hash": "c109a77111e0b297",
           "repeatCount": 1,
           "responseDate": "Mon, 12 Oct 2026 02:36:25 GMT",
+          "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
+          "age": null
+        }
+      }
+    },
+    {
+      "collectedAt": "2026-10-12T09:41:54.443Z",
+      "checkpointId": "a9173a85-3fc0-424c-84f0-defa632481e4",
+      "queueLength": 89,
+      "queueChange": -170,
+      "statistics": {
+        "carLastHour": 35,
+        "carLastDay": 572,
+        "averagePerHour24": 23.83
+      },
+      "registrationsObservedLastHour": 2,
+      "estimatedRegistrationsLastHour": null,
+      "collectionIntervalHours": null,
+      "registrationsObservedSincePrevious": null,
+      "estimatedRegistrationsSincePrevious": null,
+      "queueComposition": {
+        "statusCounts": {
+          "2": 78,
+          "3": 11
+        },
+        "typeQueueCounts": {
+          "3": 89
+        },
+        "withOrderId": 78,
+        "withoutOrderId": 11
+      },
+      "freshness": "fresh",
+      "warnings": [],
+      "queueTiming": {
+        "oldestRegistrationAt": "2026-10-11T16:06:36.000Z",
+        "newestRegistrationAt": "2026-10-12T09:37:05.000Z",
+        "latestChangedAt": "2026-10-12T09:37:05.000Z",
+        "medianWaitingHours": 7.38
+      },
+      "vehicleTimeline": [
+        {
+          "registrationAt": "2026-10-11T16:06:36.000Z",
+          "changedAt": "2026-10-12T08:45:05.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T16:27:22.000Z",
+          "changedAt": "2026-10-12T08:45:06.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T16:38:45.000Z",
+          "changedAt": "2026-10-12T08:47:06.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T16:55:02.000Z",
+          "changedAt": "2026-10-12T08:50:05.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T17:11:14.000Z",
+          "changedAt": "2026-10-12T08:50:05.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T17:28:57.000Z",
+          "changedAt": "2026-10-12T09:01:05.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T17:37:29.000Z",
+          "changedAt": "2026-10-12T09:12:05.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T18:03:19.000Z",
+          "changedAt": "2026-10-12T09:25:05.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T18:03:46.000Z",
+          "changedAt": "2026-10-12T09:25:06.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T18:06:17.000Z",
+          "changedAt": "2026-10-12T09:25:06.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T18:10:06.000Z",
+          "changedAt": "2026-10-12T09:25:06.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T18:11:13.000Z",
+          "changedAt": "2026-10-11T18:11:13.000Z",
+          "orderId": 1,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T18:20:50.000Z",
+          "changedAt": "2026-10-11T18:20:50.000Z",
+          "orderId": 2,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T18:27:27.000Z",
+          "changedAt": "2026-10-11T18:27:27.000Z",
+          "orderId": 3,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T18:28:39.000Z",
+          "changedAt": "2026-10-11T18:28:39.000Z",
+          "orderId": 4,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T18:34:59.000Z",
+          "changedAt": "2026-10-11T18:34:59.000Z",
+          "orderId": 5,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T18:35:28.000Z",
+          "changedAt": "2026-10-11T18:35:28.000Z",
+          "orderId": 6,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T18:38:07.000Z",
+          "changedAt": "2026-10-11T18:38:07.000Z",
+          "orderId": 7,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T18:45:15.000Z",
+          "changedAt": "2026-10-11T18:45:15.000Z",
+          "orderId": 8,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T19:00:07.000Z",
+          "changedAt": "2026-10-11T19:00:07.000Z",
+          "orderId": 9,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T19:02:18.000Z",
+          "changedAt": "2026-10-11T19:02:18.000Z",
+          "orderId": 10,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T19:09:22.000Z",
+          "changedAt": "2026-10-11T19:09:22.000Z",
+          "orderId": 11,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T19:09:36.000Z",
+          "changedAt": "2026-10-11T19:09:36.000Z",
+          "orderId": 12,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T19:25:01.000Z",
+          "changedAt": "2026-10-11T19:25:01.000Z",
+          "orderId": 13,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T19:31:46.000Z",
+          "changedAt": "2026-10-11T19:31:46.000Z",
+          "orderId": 14,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T19:43:28.000Z",
+          "changedAt": "2026-10-11T19:43:28.000Z",
+          "orderId": 15,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T19:52:53.000Z",
+          "changedAt": "2026-10-11T19:52:53.000Z",
+          "orderId": 16,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T20:34:00.000Z",
+          "changedAt": "2026-10-11T20:34:00.000Z",
+          "orderId": 17,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T21:04:03.000Z",
+          "changedAt": "2026-10-11T21:04:03.000Z",
+          "orderId": 18,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T21:05:32.000Z",
+          "changedAt": "2026-10-11T21:05:32.000Z",
+          "orderId": 19,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T21:09:09.000Z",
+          "changedAt": "2026-10-11T21:09:09.000Z",
+          "orderId": 20,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T21:27:17.000Z",
+          "changedAt": "2026-10-11T21:27:17.000Z",
+          "orderId": 21,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T21:29:23.000Z",
+          "changedAt": "2026-10-11T21:29:23.000Z",
+          "orderId": 22,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T21:30:14.000Z",
+          "changedAt": "2026-10-11T21:30:14.000Z",
+          "orderId": 23,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T22:06:37.000Z",
+          "changedAt": "2026-10-11T22:06:37.000Z",
+          "orderId": 24,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T23:10:55.000Z",
+          "changedAt": "2026-10-11T23:10:55.000Z",
+          "orderId": 25,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T23:30:48.000Z",
+          "changedAt": "2026-10-11T23:30:48.000Z",
+          "orderId": 26,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T23:31:27.000Z",
+          "changedAt": "2026-10-11T23:31:27.000Z",
+          "orderId": 27,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-11T23:52:34.000Z",
+          "changedAt": "2026-10-11T23:52:34.000Z",
+          "orderId": 28,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T00:28:17.000Z",
+          "changedAt": "2026-10-12T00:28:17.000Z",
+          "orderId": 29,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T00:36:40.000Z",
+          "changedAt": "2026-10-12T00:36:40.000Z",
+          "orderId": 30,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T00:38:20.000Z",
+          "changedAt": "2026-10-12T00:38:20.000Z",
+          "orderId": 31,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T01:01:06.000Z",
+          "changedAt": "2026-10-12T01:01:06.000Z",
+          "orderId": 32,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T01:02:07.000Z",
+          "changedAt": "2026-10-12T01:02:07.000Z",
+          "orderId": 33,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T02:19:13.000Z",
+          "changedAt": "2026-10-12T02:19:13.000Z",
+          "orderId": 34,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T02:19:41.000Z",
+          "changedAt": "2026-10-12T02:19:41.000Z",
+          "orderId": 35,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T03:06:23.000Z",
+          "changedAt": "2026-10-12T03:06:23.000Z",
+          "orderId": 36,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T03:19:19.000Z",
+          "changedAt": "2026-10-12T03:19:19.000Z",
+          "orderId": 37,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T03:38:00.000Z",
+          "changedAt": "2026-10-12T03:38:00.000Z",
+          "orderId": 38,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T03:50:48.000Z",
+          "changedAt": "2026-10-12T03:50:48.000Z",
+          "orderId": 39,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T03:52:31.000Z",
+          "changedAt": "2026-10-12T03:52:31.000Z",
+          "orderId": 40,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T04:12:19.000Z",
+          "changedAt": "2026-10-12T04:12:19.000Z",
+          "orderId": 41,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T04:20:34.000Z",
+          "changedAt": "2026-10-12T04:20:34.000Z",
+          "orderId": 42,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T04:56:43.000Z",
+          "changedAt": "2026-10-12T04:56:43.000Z",
+          "orderId": 43,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T05:01:37.000Z",
+          "changedAt": "2026-10-12T05:01:37.000Z",
+          "orderId": 44,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T05:11:43.000Z",
+          "changedAt": "2026-10-12T05:11:43.000Z",
+          "orderId": 45,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T05:14:18.000Z",
+          "changedAt": "2026-10-12T05:14:18.000Z",
+          "orderId": 46,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T05:14:52.000Z",
+          "changedAt": "2026-10-12T05:14:52.000Z",
+          "orderId": 47,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T05:15:15.000Z",
+          "changedAt": "2026-10-12T05:15:15.000Z",
+          "orderId": 48,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T05:17:13.000Z",
+          "changedAt": "2026-10-12T05:17:13.000Z",
+          "orderId": 49,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T05:23:05.000Z",
+          "changedAt": "2026-10-12T05:23:05.000Z",
+          "orderId": 50,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T05:38:42.000Z",
+          "changedAt": "2026-10-12T05:38:42.000Z",
+          "orderId": 51,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T05:42:52.000Z",
+          "changedAt": "2026-10-12T05:42:52.000Z",
+          "orderId": 52,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T05:45:47.000Z",
+          "changedAt": "2026-10-12T05:45:47.000Z",
+          "orderId": 53,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T05:51:02.000Z",
+          "changedAt": "2026-10-12T05:51:02.000Z",
+          "orderId": 54,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T06:20:38.000Z",
+          "changedAt": "2026-10-12T06:20:38.000Z",
+          "orderId": 55,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T06:23:21.000Z",
+          "changedAt": "2026-10-12T06:23:21.000Z",
+          "orderId": 56,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T06:27:23.000Z",
+          "changedAt": "2026-10-12T06:27:23.000Z",
+          "orderId": 57,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T06:43:53.000Z",
+          "changedAt": "2026-10-12T06:43:53.000Z",
+          "orderId": 58,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T07:03:40.000Z",
+          "changedAt": "2026-10-12T07:03:40.000Z",
+          "orderId": 59,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T07:07:47.000Z",
+          "changedAt": "2026-10-12T07:07:47.000Z",
+          "orderId": 60,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T07:22:51.000Z",
+          "changedAt": "2026-10-12T07:22:51.000Z",
+          "orderId": 61,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T07:23:05.000Z",
+          "changedAt": "2026-10-12T07:23:05.000Z",
+          "orderId": 62,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T07:24:55.000Z",
+          "changedAt": "2026-10-12T07:24:55.000Z",
+          "orderId": 63,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T07:39:50.000Z",
+          "changedAt": "2026-10-12T07:39:50.000Z",
+          "orderId": 64,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T07:45:59.000Z",
+          "changedAt": "2026-10-12T07:45:59.000Z",
+          "orderId": 65,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T07:52:42.000Z",
+          "changedAt": "2026-10-12T07:52:42.000Z",
+          "orderId": 66,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T07:57:48.000Z",
+          "changedAt": "2026-10-12T07:57:48.000Z",
+          "orderId": 67,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T07:58:41.000Z",
+          "changedAt": "2026-10-12T07:58:41.000Z",
+          "orderId": 68,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T07:58:58.000Z",
+          "changedAt": "2026-10-12T07:58:58.000Z",
+          "orderId": 69,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T08:06:36.000Z",
+          "changedAt": "2026-10-12T08:06:36.000Z",
+          "orderId": 70,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T08:14:21.000Z",
+          "changedAt": "2026-10-12T08:14:21.000Z",
+          "orderId": 71,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T08:18:58.000Z",
+          "changedAt": "2026-10-12T08:18:58.000Z",
+          "orderId": 72,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T08:19:20.000Z",
+          "changedAt": "2026-10-12T08:19:20.000Z",
+          "orderId": 73,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T08:20:33.000Z",
+          "changedAt": "2026-10-12T08:20:33.000Z",
+          "orderId": 74,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T08:23:24.000Z",
+          "changedAt": "2026-10-12T08:23:24.000Z",
+          "orderId": 75,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T08:27:28.000Z",
+          "changedAt": "2026-10-12T08:27:28.000Z",
+          "orderId": 76,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T08:55:39.000Z",
+          "changedAt": "2026-10-12T08:55:39.000Z",
+          "orderId": 77,
+          "status": 2,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-12T09:37:05.000Z",
+          "changedAt": "2026-10-12T09:37:05.000Z",
+          "orderId": 78,
+          "status": 2,
+          "typeQueue": 3
+        }
+      ],
+      "source": {
+        "statistics": {
+          "state": "ok",
+          "hash": "a695a9ebacee3706",
+          "repeatCount": 1,
+          "responseDate": "Mon, 12 Oct 2026 09:41:55 GMT",
+          "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
+          "age": null
+        },
+        "monitoring": {
+          "state": "ok",
+          "hash": "1546354833f56984",
+          "repeatCount": 1,
+          "responseDate": "Mon, 12 Oct 2026 09:41:55 GMT",
           "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
           "age": null
         }
