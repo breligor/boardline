@@ -4,7 +4,7 @@
     "id": "a9173a85-3fc0-424c-84f0-defa632481e4",
     "name": "Брест — Тересполь"
   },
-  "updatedAt": "2026-10-24T01:27:49.809Z",
+  "updatedAt": "2026-10-24T06:20:49.251Z",
   "snapshots": [
     {
       "collectedAt": "2026-09-04T18:44:50.115Z",
@@ -23437,6 +23437,109 @@
           "hash": "477628850c57b90c",
           "repeatCount": 1,
           "responseDate": "Sat, 24 Oct 2026 01:27:50 GMT",
+          "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
+          "age": null
+        }
+      }
+    },
+    {
+      "collectedAt": "2026-10-24T06:20:49.251Z",
+      "checkpointId": "a9173a85-3fc0-424c-84f0-defa632481e4",
+      "queueLength": 7,
+      "queueChange": -120,
+      "statistics": {
+        "carLastHour": 27,
+        "carLastDay": 611,
+        "averagePerHour24": 25.46
+      },
+      "registrationsObservedLastHour": 0,
+      "estimatedRegistrationsLastHour": null,
+      "collectionIntervalHours": null,
+      "registrationsObservedSincePrevious": null,
+      "estimatedRegistrationsSincePrevious": null,
+      "queueComposition": {
+        "statusCounts": {
+          "3": 7
+        },
+        "typeQueueCounts": {
+          "3": 7
+        },
+        "withOrderId": 0,
+        "withoutOrderId": 7
+      },
+      "freshness": "fresh",
+      "warnings": [],
+      "queueTiming": {
+        "oldestRegistrationAt": "2026-10-24T02:21:24.000Z",
+        "newestRegistrationAt": "2026-10-24T05:11:18.000Z",
+        "latestChangedAt": "2026-10-24T05:46:04.000Z",
+        "medianWaitingHours": 2.46
+      },
+      "vehicleTimeline": [
+        {
+          "registrationAt": "2026-10-24T02:21:24.000Z",
+          "changedAt": "2026-10-24T05:45:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-24T02:43:17.000Z",
+          "changedAt": "2026-10-24T05:45:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-24T03:09:28.000Z",
+          "changedAt": "2026-10-24T05:45:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-24T03:53:13.000Z",
+          "changedAt": "2026-10-24T05:46:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-24T04:12:52.000Z",
+          "changedAt": "2026-10-24T05:46:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-24T04:36:56.000Z",
+          "changedAt": "2026-10-24T05:46:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-24T05:11:18.000Z",
+          "changedAt": "2026-10-24T05:46:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        }
+      ],
+      "source": {
+        "statistics": {
+          "state": "ok",
+          "hash": "f99f1e33f1c23282",
+          "repeatCount": 1,
+          "responseDate": "Sat, 24 Oct 2026 06:20:50 GMT",
+          "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
+          "age": null
+        },
+        "monitoring": {
+          "state": "ok",
+          "hash": "dfc082d164e5edf2",
+          "repeatCount": 1,
+          "responseDate": "Sat, 24 Oct 2026 06:20:50 GMT",
           "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
           "age": null
         }
