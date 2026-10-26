@@ -4,7 +4,7 @@
     "id": "a9173a85-3fc0-424c-84f0-defa632481e4",
     "name": "Брест — Тересполь"
   },
-  "updatedAt": "2026-10-26T14:04:44.478Z",
+  "updatedAt": "2026-10-26T19:51:11.747Z",
   "snapshots": [
     {
       "collectedAt": "2026-09-04T18:44:50.115Z",
@@ -14720,57 +14720,6 @@
         "latestChangedAt": "2026-10-23T15:50:29.000Z",
         "medianWaitingHours": 0.15
       },
-      "vehicleTimeline": [
-        {
-          "registrationAt": "2026-10-23T15:27:25.000Z",
-          "changedAt": "2026-10-23T15:28:06.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-23T15:34:28.000Z",
-          "changedAt": "2026-10-23T15:35:05.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-23T15:37:46.000Z",
-          "changedAt": "2026-10-23T15:38:05.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-23T15:41:55.000Z",
-          "changedAt": "2026-10-23T15:42:06.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-23T15:49:07.000Z",
-          "changedAt": "2026-10-23T15:50:05.000Z",
-          "orderId": null,
-          "status": 3,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-23T15:50:13.000Z",
-          "changedAt": "2026-10-23T15:50:13.000Z",
-          "orderId": 1,
-          "status": 2,
-          "typeQueue": 3
-        },
-        {
-          "registrationAt": "2026-10-23T15:50:29.000Z",
-          "changedAt": "2026-10-23T15:50:29.000Z",
-          "orderId": 2,
-          "status": 2,
-          "typeQueue": 3
-        }
-      ],
       "source": {
         "statistics": {
           "state": "ok",
@@ -38705,6 +38654,151 @@
           "hash": "7b27af029b643dda",
           "repeatCount": 1,
           "responseDate": "Mon, 26 Oct 2026 14:04:45 GMT",
+          "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
+          "age": null
+        }
+      }
+    },
+    {
+      "collectedAt": "2026-10-26T19:51:11.747Z",
+      "checkpointId": "a9173a85-3fc0-424c-84f0-defa632481e4",
+      "queueLength": 13,
+      "queueChange": -58,
+      "statistics": {
+        "carLastHour": 31,
+        "carLastDay": 542,
+        "averagePerHour24": 22.58
+      },
+      "registrationsObservedLastHour": 13,
+      "estimatedRegistrationsLastHour": null,
+      "collectionIntervalHours": null,
+      "registrationsObservedSincePrevious": null,
+      "estimatedRegistrationsSincePrevious": null,
+      "queueComposition": {
+        "statusCounts": {
+          "3": 13
+        },
+        "typeQueueCounts": {
+          "3": 13
+        },
+        "withOrderId": 0,
+        "withoutOrderId": 13
+      },
+      "freshness": "fresh",
+      "warnings": [],
+      "queueTiming": {
+        "oldestRegistrationAt": "2026-10-26T19:11:31.000Z",
+        "newestRegistrationAt": "2026-10-26T19:49:45.000Z",
+        "latestChangedAt": "2026-10-26T19:50:04.000Z",
+        "medianWaitingHours": 0.14
+      },
+      "vehicleTimeline": [
+        {
+          "registrationAt": "2026-10-26T19:11:31.000Z",
+          "changedAt": "2026-10-26T19:12:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-26T19:29:38.000Z",
+          "changedAt": "2026-10-26T19:30:05.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-26T19:31:33.000Z",
+          "changedAt": "2026-10-26T19:32:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-26T19:35:53.000Z",
+          "changedAt": "2026-10-26T19:36:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-26T19:37:59.000Z",
+          "changedAt": "2026-10-26T19:38:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-26T19:41:02.000Z",
+          "changedAt": "2026-10-26T19:41:05.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-26T19:42:56.000Z",
+          "changedAt": "2026-10-26T19:43:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-26T19:43:59.000Z",
+          "changedAt": "2026-10-26T19:44:05.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-26T19:44:32.000Z",
+          "changedAt": "2026-10-26T19:45:05.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-26T19:44:57.000Z",
+          "changedAt": "2026-10-26T19:45:05.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-26T19:47:14.000Z",
+          "changedAt": "2026-10-26T19:48:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-26T19:47:30.000Z",
+          "changedAt": "2026-10-26T19:48:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        },
+        {
+          "registrationAt": "2026-10-26T19:49:45.000Z",
+          "changedAt": "2026-10-26T19:50:04.000Z",
+          "orderId": null,
+          "status": 3,
+          "typeQueue": 3
+        }
+      ],
+      "source": {
+        "statistics": {
+          "state": "ok",
+          "hash": "3fd86b372d864a31",
+          "repeatCount": 1,
+          "responseDate": "Mon, 26 Oct 2026 19:51:12 GMT",
+          "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
+          "age": null
+        },
+        "monitoring": {
+          "state": "ok",
+          "hash": "2434773c9bb566bd",
+          "repeatCount": 1,
+          "responseDate": "Mon, 26 Oct 2026 19:51:12 GMT",
           "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
           "age": null
         }
