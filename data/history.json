@@ -4,7 +4,7 @@
     "id": "a9173a85-3fc0-424c-84f0-defa632481e4",
     "name": "Брест — Тересполь"
   },
-  "updatedAt": "2026-11-14T01:39:34.871Z",
+  "updatedAt": "2026-11-14T08:50:11.005Z",
   "snapshots": [
     {
       "collectedAt": "2026-09-04T18:44:50.115Z",
@@ -19096,7 +19096,6 @@
         "latestChangedAt": null,
         "medianWaitingHours": null
       },
-      "vehicleTimeline": [],
       "source": {
         "statistics": {
           "state": "ok",
@@ -19631,6 +19630,58 @@
           "hash": "37ddf516b4b17999",
           "repeatCount": 37,
           "responseDate": "Sat, 14 Nov 2026 01:39:36 GMT",
+          "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
+          "age": null
+        }
+      }
+    },
+    {
+      "collectedAt": "2026-11-14T08:50:11.005Z",
+      "checkpointId": "a9173a85-3fc0-424c-84f0-defa632481e4",
+      "queueLength": 0,
+      "queueChange": 0,
+      "statistics": {
+        "carLastHour": 22,
+        "carLastDay": 517,
+        "averagePerHour24": 21.54
+      },
+      "registrationsObservedLastHour": 0,
+      "estimatedRegistrationsLastHour": null,
+      "collectionIntervalHours": null,
+      "registrationsObservedSincePrevious": null,
+      "estimatedRegistrationsSincePrevious": null,
+      "queueComposition": {
+        "statusCounts": {},
+        "typeQueueCounts": {},
+        "withOrderId": 0,
+        "withoutOrderId": 0
+      },
+      "freshness": "possibly_stale",
+      "warnings": [
+        "В monitoring-new нет времени последнего изменения; свежесть нельзя подтвердить.",
+        "Ответ monitoring-new повторился без изменений не менее трёх раз."
+      ],
+      "queueTiming": {
+        "oldestRegistrationAt": null,
+        "newestRegistrationAt": null,
+        "latestChangedAt": null,
+        "medianWaitingHours": null
+      },
+      "vehicleTimeline": [],
+      "source": {
+        "statistics": {
+          "state": "ok",
+          "hash": "15edeaafe62260a5",
+          "repeatCount": 1,
+          "responseDate": "Sat, 14 Nov 2026 08:50:12 GMT",
+          "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
+          "age": null
+        },
+        "monitoring": {
+          "state": "ok",
+          "hash": "37ddf516b4b17999",
+          "repeatCount": 38,
+          "responseDate": "Sat, 14 Nov 2026 08:50:12 GMT",
           "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
           "age": null
         }
