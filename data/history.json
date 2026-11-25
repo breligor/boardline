@@ -4,7 +4,7 @@
     "id": "a9173a85-3fc0-424c-84f0-defa632481e4",
     "name": "Брест — Тересполь"
   },
-  "updatedAt": "2026-11-24T17:24:57.627Z",
+  "updatedAt": "2026-11-25T01:31:33.827Z",
   "snapshots": [
     {
       "collectedAt": "2026-09-04T18:44:50.115Z",
@@ -20932,7 +20932,6 @@
         "latestChangedAt": null,
         "medianWaitingHours": null
       },
-      "vehicleTimeline": [],
       "source": {
         "statistics": {
           "state": "ok",
@@ -20984,7 +20983,6 @@
         "latestChangedAt": null,
         "medianWaitingHours": null
       },
-      "vehicleTimeline": [],
       "source": {
         "statistics": {
           "state": "ok",
@@ -21415,6 +21413,58 @@
           "hash": "37ddf516b4b17999",
           "repeatCount": 72,
           "responseDate": "Tue, 24 Nov 2026 17:24:58 GMT",
+          "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
+          "age": null
+        }
+      }
+    },
+    {
+      "collectedAt": "2026-11-25T01:31:33.827Z",
+      "checkpointId": "a9173a85-3fc0-424c-84f0-defa632481e4",
+      "queueLength": 0,
+      "queueChange": 0,
+      "statistics": {
+        "carLastHour": 24,
+        "carLastDay": 515,
+        "averagePerHour24": 21.46
+      },
+      "registrationsObservedLastHour": 0,
+      "estimatedRegistrationsLastHour": null,
+      "collectionIntervalHours": null,
+      "registrationsObservedSincePrevious": null,
+      "estimatedRegistrationsSincePrevious": null,
+      "queueComposition": {
+        "statusCounts": {},
+        "typeQueueCounts": {},
+        "withOrderId": 0,
+        "withoutOrderId": 0
+      },
+      "freshness": "possibly_stale",
+      "warnings": [
+        "В monitoring-new нет времени последнего изменения; свежесть нельзя подтвердить.",
+        "Ответ monitoring-new повторился без изменений не менее трёх раз."
+      ],
+      "queueTiming": {
+        "oldestRegistrationAt": null,
+        "newestRegistrationAt": null,
+        "latestChangedAt": null,
+        "medianWaitingHours": null
+      },
+      "vehicleTimeline": [],
+      "source": {
+        "statistics": {
+          "state": "ok",
+          "hash": "833ee33b50c93285",
+          "repeatCount": 1,
+          "responseDate": "Wed, 25 Nov 2026 01:31:34 GMT",
+          "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
+          "age": null
+        },
+        "monitoring": {
+          "state": "ok",
+          "hash": "37ddf516b4b17999",
+          "repeatCount": 73,
+          "responseDate": "Wed, 25 Nov 2026 01:31:34 GMT",
           "cacheControl": "no-cache, no-store, max-age=0, must-revalidate",
           "age": null
         }
